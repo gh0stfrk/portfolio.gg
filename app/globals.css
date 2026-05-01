@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: 255 255 255;
+  --color-surface: 246 249 247;
+  --color-primary: 45 212 105;
+  --color-text-primary: 11 15 20;
+  --color-text-secondary: 82 94 88;
+  --color-subtle: 220 230 224;
+}
+
+.dark {
+  --color-background: 4 7 5;
+  --color-surface: 10 18 13;
+  --color-primary: 45 212 105;
+  --color-text-primary: 246 248 247;
+  --color-text-secondary: 166 179 170;
+  --color-subtle: 29 45 35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-text-primary));
+  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a,
+button {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+::selection {
+  background: rgb(var(--color-primary) / 0.28);
+  color: rgb(var(--color-text-primary));
+}
+
+.prose pre {
+  border: 1px solid rgb(var(--color-subtle));
+  background: #050805;
+}
+
+.prose code {
+  font-weight: 600;
+}
+
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+  color: rgb(var(--color-primary));
+  text-decoration: none;
+}
