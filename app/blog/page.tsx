@@ -12,7 +12,7 @@ export default async function BlogPage() {
   const posts = await getAllBlogPosts();
 
   return (
-    <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-5xl px-6 py-16 sm:px-6 lg:px-8">
       <SectionHeading
         description="Technical notes and project writeups."
         eyebrow="Blog"

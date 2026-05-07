@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-6xl px-6 py-16 sm:px-6 lg:px-8">
       <SectionHeading
         description="Software engineer based in Mumbai, India. I work mainly on backend APIs, cloud services, and data workflows."
         eyebrow="About"

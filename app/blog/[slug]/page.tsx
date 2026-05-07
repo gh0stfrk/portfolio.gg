@@ -47,7 +47,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = await getBlogPost(slug);
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+    <article className="mx-auto max-w-3xl px-6 py-16 sm:px-6 lg:px-8">
       <div className="mb-10">
         <div className="flex flex-wrap items-center gap-2 text-sm text-text-secondary">
           <time dateTime={post.date}>

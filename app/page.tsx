@@ -10,7 +10,7 @@ export default async function HomePage() {
 
   return (
     <div>
-      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
+      <section className="mx-auto max-w-6xl px-6 py-20 sm:px-6 sm:py-28 lg:px-8">
         <div className="max-w-3xl">
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
             Software Engineer
@@ -36,7 +36,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-6 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <SectionHeading eyebrow="Blog" title="Recent writing" />
           <Link
@@ -72,7 +72,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-6xl px-6 py-12 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Projects" title="Selected work" />
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {projects.slice(0, 3).map((project) => (

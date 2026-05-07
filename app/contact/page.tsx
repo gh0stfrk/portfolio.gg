@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto max-w-4xl px-6 py-16 sm:px-6 lg:px-8">
       <SectionHeading
         description="Email and social links."
         eyebrow="Contact"
