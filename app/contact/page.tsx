@@ -19,13 +19,15 @@ export default function ContactPage() {
 
       <div className="mt-10 rounded-2xl border border-subtle bg-surface p-6 sm:p-8">
         <Link
-          className="inline-flex items-center gap-3 text-lg font-semibold text-text-primary hover:text-primary"
+          className="flex items-center gap-3 text-base font-semibold text-text-primary hover:text-primary sm:text-lg"
           href="mailto:salman@salmansyyd.com"
         >
           <span className="inline-flex size-11 items-center justify-center rounded-full bg-primary/15 text-primary">
             <Mail className="size-5" />
           </span>
-          salman@salmansyyd.com
+          <span className="min-w-0 break-all leading-tight">
+            salman@salmansyyd.com
+          </span>
         </Link>
         <div className="mt-8 flex flex-wrap gap-3">
           {[
