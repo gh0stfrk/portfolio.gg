@@ -32,12 +32,12 @@ export function Navbar() {
           <LogoMark />
         </Link>
 
-        <div className="hidden items-center gap-1 rounded-full border border-subtle bg-background/55 px-2 py-1 backdrop-blur-xl md:flex">
+        <div className="hidden items-center gap-1 md:flex">
           {links.map((link) => (
             <Link
               className={cn(
-                "rounded-full px-4 py-2 text-sm font-medium text-text-secondary hover:bg-surface hover:text-text-primary",
-                pathname === link.href && "bg-surface text-text-primary"
+                "px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:text-text-primary",
+                pathname === link.href && "text-text-primary"
               )}
               href={link.href}
               key={link.href}
@@ -94,8 +94,8 @@ export function Navbar() {
               {links.map((link) => (
                 <Link
                   className={cn(
-                    "rounded-2xl border border-subtle bg-surface/70 px-4 py-4 text-2xl font-semibold tracking-tight text-text-secondary backdrop-blur-xl hover:border-primary/60 hover:text-text-primary",
-                    pathname === link.href && "border-primary/60 text-text-primary"
+                    "rounded-2xl border border-primary/30 bg-[linear-gradient(135deg,rgb(var(--color-primary)/0.24),rgb(var(--color-surface)/0.985)_38%,rgb(var(--color-surface)/0.995))] px-4 py-4 text-right text-2xl font-semibold tracking-tight text-text-secondary shadow-soft backdrop-blur-2xl hover:border-primary/45 hover:bg-[linear-gradient(135deg,rgb(var(--color-primary)/0.3),rgb(var(--color-surface)/0.99)_38%,rgb(var(--color-surface)/1))] hover:text-text-primary",
+                    pathname === link.href && "border-primary/60 bg-[linear-gradient(135deg,rgb(var(--color-primary)/0.34),rgb(var(--color-surface)/0.995)_38%,rgb(var(--color-surface)/1))] text-text-primary"
                   )}
                   href={link.href}
                   key={link.href}
