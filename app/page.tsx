@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 import { SectionHeading } from "@/components/section-heading";
+import { NeonEagle } from "@/components/neon-eagle";
 import { getAllBlogPosts } from "@/lib/blog";
 import { projects } from "@/lib/data";
 
@@ -11,27 +12,34 @@ export default async function HomePage() {
   return (
     <div>
       <section className="mx-auto max-w-6xl px-6 py-20 sm:px-6 sm:py-28 lg:px-8">
-        <div className="max-w-3xl">
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-            Software Engineer
-          </p>
-          <h1 className="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
-            Salman Sayyed
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
-            Backend-focused engineer working with Node.js, TypeScript, AWS,
-            PostgreSQL, Docker, and CI/CD.
-          </p>
-          <p className="mt-4 max-w-2xl leading-relaxed text-text-secondary">
-            Currently on the Bliss Modernization team, helping move a legacy
-            Java monolith for wholesale banknote trading toward a microservices
-            architecture.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/blog">View Blogs</ButtonLink>
-            <ButtonLink href="/projects" variant="secondary">
-              View Projects
-            </ButtonLink>
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+              Software Engineer
+            </p>
+            <h1 className="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl lg:text-6xl">
+              Salman Sayyed
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
+              Backend-focused engineer working with Node.js, TypeScript, AWS,
+              PostgreSQL, Docker, and CI/CD.
+            </p>
+            <p className="mt-4 max-w-2xl leading-relaxed text-text-secondary">
+              Currently on the Bliss Modernization team, helping move a legacy
+              Java monolith for wholesale banknote trading toward a microservices
+              architecture.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <ButtonLink href="/blog">View Blogs</ButtonLink>
+              <ButtonLink href="/projects" variant="secondary">
+                View Projects
+              </ButtonLink>
+            </div>
+          </div>
+          <div className="hidden h-96 w-96 flex-shrink-0 lg:block">
+            <div className="h-full w-full">
+              <NeonEagle />
+            </div>
           </div>
         </div>
       </section>
