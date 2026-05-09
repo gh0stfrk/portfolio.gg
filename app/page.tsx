@@ -22,13 +22,13 @@ export default async function HomePage() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
               Backend-focused engineer working with Node.js, TypeScript, AWS,
-              PostgreSQL, Docker, and CI/CD.
+              PostgreSQL, Docker.
             </p>
-            <p className="mt-4 max-w-2xl leading-relaxed text-text-secondary">
+            {/* <p className="mt-4 max-w-2xl leading-relaxed text-text-secondary">
               Currently on the Bliss Modernization team, helping move a legacy
               Java monolith for wholesale banknote trading toward a microservices
               architecture.
-            </p>
+            </p> */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/blog">View Blogs</ButtonLink>
               <ButtonLink href="/projects" variant="secondary">

@@ -18,15 +18,15 @@ export default function AboutPage() {
 
       <section className="mt-10 max-w-3xl space-y-4 leading-relaxed text-text-secondary">
         <p>
-          I am currently working with the Bliss Modernization team on a
-          wholesale banknote trading platform used across multiple countries.
-          The work involves moving parts of an older Java monolith into
-          Node.js and TypeScript services.
+          I currently work as a Junior Software Developer at Travelex,
+          contributing to backend modernization initiatives for financial
+          systems and integration workflows across business-critical services.
         </p>
         <p>
-          My backend work includes API development, PostgreSQL, AWS, EKS,
-          Docker images, CircleCI pipelines, and Node.js libraries used across
-          the project.
+          I started as a TRP Software Developer, where I built and maintained
+          ETL jobs that processed transaction and financial data. My work today
+          includes API development, AWS-based integrations, and reliable data
+          delivery pipelines using Node.js, TypeScript, and cloud tooling.
         </p>
       </section>
 

@@ -39,16 +39,16 @@ export const skillGroups = [
 
 export const experiences = [
   {
-    period: "Present",
-    role: "Software Developer - Travelex, Bliss Modernization",
+    period: "Sept 2025 - Present",
+    role: "Junior Software Developer - Travelex",
     summary:
-      "Building backend APIs for a modernization program that is moving a legacy Java monolith toward Node.js and TypeScript microservices."
+      "Working on backend modernization initiatives, building and maintaining APIs and integration workflows for high-volume financial systems using Node.js, TypeScript, AWS, and distributed service patterns."
   },
   {
-    period: "Sept 2024 - Present",
-    role: "Software Developer - Travelex",
+    period: "Sept 2024 - Aug 2025",
+    role: "TRP Software Developer - Travelex",
     summary:
-      "Worked on financial data workflows, AWS Lambda integrations, ETL processes, and delivery pipelines using AWS, JavaScript, Python, CircleCI, MSSQL, and DynamoDB."
+      "Built and maintained ETL jobs that processed transactions and financial data, including AWS Lambda-based workflows for transforming and delivering large data volumes to downstream financial systems."
   },
   {
     period: "2020 - 2023",
