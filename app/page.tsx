@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
+import { HeroCtaMerge } from "@/components/hero-cta-merge";
 import { SectionHeading } from "@/components/section-heading";
 import { NeonEagle } from "@/components/neon-eagle";
 import { getAllBlogPosts } from "@/lib/blog";
@@ -11,8 +12,36 @@ export default async function HomePage() {
 
   return (
     <div>
-      <section className="mx-auto max-w-6xl px-6 py-20 sm:px-6 sm:py-28 lg:px-8">
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:justify-between">
+      <section className="mx-auto max-w-6xl px-6 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-28">
+        <div className="lg:hidden">
+          <div className="relative mx-auto flex min-h-[calc(100svh-8rem)] max-w-3xl flex-col justify-between gap-3 py-1 sm:min-h-[35rem] sm:gap-5 sm:py-2">
+            <div>
+              <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+                Software Engineer
+              </p>
+              <h1 className="text-4xl font-bold tracking-tight text-text-primary sm:text-5xl">
+                Salman Sayyed
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
+                Backend-focused engineer working with Node.js, TypeScript, AWS,
+                PostgreSQL, Docker.
+              </p>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-[11.5rem] sm:max-w-[15rem] md:max-w-[17rem]">
+              <div className="pointer-events-none absolute inset-x-5 top-1/2 h-16 -translate-y-1/2 rounded-full bg-primary/20 blur-2xl" />
+              <div className="relative aspect-square">
+                <NeonEagle />
+              </div>
+            </div>
+
+            <div className="pt-2 sm:pt-1">
+              <HeroCtaMerge blogHref="/blog" projectsHref="/projects" />
+            </div>
+          </div>
+        </div>
+
+        <div className="hidden lg:flex lg:items-center lg:justify-between">
           <div className="max-w-3xl">
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
               Software Engineer
