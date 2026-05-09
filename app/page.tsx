@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { ButtonLink } from "@/components/button-link";
 import { HeroCtaMerge } from "@/components/hero-cta-merge";
 import { SectionHeading } from "@/components/section-heading";
 import { NeonEagle } from "@/components/neon-eagle";
@@ -36,7 +35,7 @@ export default async function HomePage() {
             </div>
 
             <div className="pt-2 sm:pt-1">
-              <HeroCtaMerge blogHref="/blog" projectsHref="/projects" />
+              <HeroCtaMerge blogHref="/blog" projectsHref="/projects" className="mx-auto max-w-sm" />
             </div>
           </div>
         </div>
@@ -58,11 +57,8 @@ export default async function HomePage() {
               Java monolith for wholesale banknote trading toward a microservices
               architecture.
             </p> */}
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/blog">View Blogs</ButtonLink>
-              <ButtonLink href="/projects" variant="secondary">
-                View Projects
-              </ButtonLink>
+            <div className="mt-8">
+              <HeroCtaMerge blogHref="/blog" projectsHref="/projects" />
             </div>
           </div>
           <div className="hidden h-96 w-96 flex-shrink-0 lg:block">
