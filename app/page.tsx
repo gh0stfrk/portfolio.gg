@@ -27,8 +27,8 @@ export default async function HomePage() {
               </p>
             </div>
 
-            <div className="relative mx-auto w-full max-w-[11.5rem] sm:max-w-[15rem] md:max-w-[17rem]">
-              <div className="pointer-events-none absolute inset-x-5 top-1/2 h-16 -translate-y-1/2 rounded-full bg-primary/20 blur-2xl" />
+            <div className="relative mx-auto w-full max-w-[18rem] sm:max-w-[22rem] md:max-w-[26rem] mt-6 mb-4">
+              <div className="pointer-events-none absolute inset-x-2 top-1/2 h-24 -translate-y-1/2 rounded-full bg-primary/20 blur-2xl" />
               <div className="relative aspect-square">
                 <NeonEagle />
               </div>
