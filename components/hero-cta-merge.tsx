@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactElement } from "react";
 import { cn } from "@/lib/utils";
 
 type HeroCtaMergeProps = {
@@ -11,7 +12,7 @@ export function HeroCtaMerge({
   blogHref,
   projectsHref,
   className
-}: HeroCtaMergeProps): JSX.Element {
+}: HeroCtaMergeProps): ReactElement {
   return (
     <div className={cn("relative w-full max-w-sm", className)}>
       <div className="pointer-events-none absolute inset-y-2 left-1/2 z-10 w-10 -translate-x-1/2 bg-gradient-to-r from-primary/10 via-primary/40 to-primary/10 blur-md" />
