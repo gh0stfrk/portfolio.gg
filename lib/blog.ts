@@ -23,6 +23,10 @@ export type BlogPost = BlogFrontmatter & {
   content: string;
 };
 
+export type BlogPostMeta = Pick<BlogFrontmatter, "date"> & {
+  slug: string;
+};
+
 function assertFrontmatter(data: Record<string, unknown>): BlogFrontmatter {
   return {
     title: String(data.title ?? "Untitled"),
@@ -41,6 +45,19 @@ export function getBlogSlugs() {
     .readdirSync(postsDirectory)
     .filter((file) => file.endsWith(".md"))
     .map((file) => file.replace(/\.md$/, ""));
+}
+
+export function getBlogPostMeta(): BlogPostMeta[] {
+  return getBlogSlugs().map((slug) => {
+    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    const file = fs.readFileSync(fullPath, "utf8");
+    const { data } = matter(file);
+
+    return {
+      slug,
+      date: String(data.date ?? new Date().toISOString())
+    };
+  });
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPost> {

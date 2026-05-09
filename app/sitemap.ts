@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getBlogSlugs } from "@/lib/blog";
+import { getBlogPostMeta } from "@/lib/blog";
 
 const siteUrl = "https://salmansyyd.com";
 
@@ -11,9 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  const posts = getBlogSlugs().map((slug) => ({
-    url: `${siteUrl}/blog/${slug}`,
-    lastModified: new Date()
+  const posts = getBlogPostMeta().map((post) => ({
+    url: `${siteUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date)
   }));
 
   return [...routes, ...posts];
