@@ -10,14 +10,10 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="mx-auto max-w-4xl px-6 py-16 sm:px-6 lg:px-8">
-      <SectionHeading
-        description="Email and social links."
-        eyebrow="Contact"
-        title="Contact"
-      />
+    <section className="mx-auto flex min-h-[calc(100svh-5rem)] max-w-4xl flex-col justify-center px-6 py-10 sm:px-6 sm:py-14 md:min-h-0 lg:px-8">
+      <SectionHeading description="Email and social links." eyebrow="Contact" title="Contact" />
 
-      <div className="mt-10 rounded-2xl border border-subtle bg-surface p-6 sm:p-8">
+      <div className="mt-8 rounded-2xl border border-subtle bg-surface p-6 sm:mt-10 sm:p-8">
         <Link
           className="flex items-center gap-3 text-base font-semibold text-text-primary hover:text-primary sm:text-lg"
           href="mailto:salman@salmansyyd.com"
