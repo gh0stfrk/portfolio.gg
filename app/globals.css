@@ -32,8 +32,18 @@ body {
   min-height: 100vh;
   background: rgb(var(--color-background));
   color: rgb(var(--color-text-primary));
-  font-family: var(--font-inter), Inter, system-ui, sans-serif;
+  font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.02em;
 }
 
 a,

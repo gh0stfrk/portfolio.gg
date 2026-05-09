@@ -21,7 +21,18 @@ const config: Config = {
         subtle: "rgb(var(--color-subtle) / <alpha-value>)"
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"]
+        sans: [
+          "var(--font-body)",
+          "Plus Jakarta Sans",
+          "system-ui",
+          "sans-serif"
+        ],
+        display: [
+          "var(--font-display)",
+          "Space Grotesk",
+          "system-ui",
+          "sans-serif"
+        ]
       },
       boxShadow: {
         soft: "0 24px 80px rgb(0 0 0 / 0.18)"
