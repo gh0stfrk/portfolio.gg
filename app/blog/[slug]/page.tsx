@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { BlogSuggestions } from "@/components/blog-suggestions";
 import { getAllBlogPosts, getBlogPost, getBlogSlugs } from "@/lib/blog";
 
 type BlogPostPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return getBlogSlugs().map((slug) => ({ slug }));
 }
 
@@ -36,7 +37,9 @@ export async function generateMetadata({
   }
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({
+  params
+}: BlogPostPageProps): Promise<React.JSX.Element> {
   const { slug } = await params;
   const slugs = getBlogSlugs();
 
@@ -45,6 +48,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const post = await getBlogPost(slug);
+  const suggestedPosts = (await getAllBlogPosts())
+    .filter((candidate) => candidate.slug !== slug)
+    .map(({ slug: postSlug, title, description, date, readingTime }) => ({
+      slug: postSlug,
+      title,
+      description,
+      date,
+      readingTime
+    }));
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-16 sm:px-6 lg:px-8">
@@ -82,6 +94,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         className="prose prose-lg max-w-none prose-headings:tracking-tight prose-headings:text-text-primary prose-p:leading-relaxed prose-p:text-text-secondary prose-strong:text-text-primary prose-li:text-text-secondary prose-code:text-text-primary prose-pre:rounded-2xl prose-pre:p-5 dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
+
+      <BlogSuggestions posts={suggestedPosts} />
     </article>
   );
 }
