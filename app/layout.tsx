@@ -19,6 +19,11 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://salmansyyd.com"),
+  icons: {
+    icon: "/bg_favicon.png",
+    shortcut: "/bg_favicon.png",
+    apple: "/bg_favicon.png"
+  },
   title: {
     default: "Salman Sayyed | Software Engineer",
     template: "%s | Salman Sayyed"
