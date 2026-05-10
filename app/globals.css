@@ -36,6 +36,17 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+@media (min-width: 1024px) {
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 h1,
 h2,
 h3,
