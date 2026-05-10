@@ -74,7 +74,7 @@ export function Footer(): ReactElement {
         <div className="mt-8 border-t border-subtle/80 pt-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-text-secondary sm:text-sm">
-              {year} Salman Sayyed. Built with Next.js and TypeScript.
+              {year} Salman Sayyed.
             </p>
             <ul className="flex flex-wrap gap-2">
               {stackTags.map((tag) => (
