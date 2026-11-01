@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export type BlogSuggestion = {
   slug: string;
@@ -16,66 +13,37 @@ type BlogSuggestionsProps = {
   limit?: number;
 };
 
-function pickRandomPosts(posts: BlogSuggestion[], limit: number): BlogSuggestion[] {
-  const shuffled = [...posts];
-
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1));
-    const current = shuffled[index];
-    shuffled[index] = shuffled[randomIndex];
-    shuffled[randomIndex] = current;
-  }
-
-  return shuffled.slice(0, limit);
-}
-
 export function BlogSuggestions({
   posts,
   limit = 2
 }: BlogSuggestionsProps): React.JSX.Element | null {
-  const [suggestions, setSuggestions] = useState<BlogSuggestion[]>([]);
-
-  useEffect(() => {
-    setSuggestions(pickRandomPosts(posts, limit));
-  }, [posts, limit]);
+  const suggestions = posts.slice(0, limit);
 
   if (suggestions.length === 0) {
     return null;
   }
 
   return (
-    <section className="mt-16 border-t border-subtle pt-10">
-      <div className="mb-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-          More To Read
-        </p>
-        <h2 className="mt-3 text-2xl font-bold tracking-tight text-text-primary sm:text-3xl">
-          Keep reading
-        </h2>
-      </div>
-
-      <div className="grid gap-4 sm:grid-cols-2">
+    <section className="taste-reveal mt-24">
+      <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-tight tracking-tight text-text-primary">
+        Keep reading
+      </h2>
+      <div className="mt-8 grid gap-x-12 gap-y-10 md:grid-cols-2">
         {suggestions.map((post) => (
-          <Link
-            className="rounded-2xl border border-subtle bg-surface p-6 transition-colors hover:border-primary/60"
-            href={`/blog/${post.slug}`}
-            key={post.slug}
-          >
-            <p className="text-sm text-text-secondary">
-              {new Date(post.date).toLocaleDateString("en", {
-                month: "long",
-                day: "numeric",
-                year: "numeric"
-              })}{" "}
-              / {post.readingTime}
-            </p>
-            <h3 className="mt-3 text-xl font-bold tracking-tight text-text-primary">
-              {post.title}
+          <article className="max-w-2xl" key={post.slug}>
+            <p className="text-sm text-text-secondary">{post.readingTime}</p>
+            <h3 className="mt-3 font-display text-xl font-semibold leading-tight tracking-tight sm:text-2xl">
+              <Link
+                className="text-text-primary transition-colors hover:text-primary"
+                href={`/blog/${post.slug}`}
+              >
+                {post.title}
+              </Link>
             </h3>
-            <p className="mt-2 leading-relaxed text-text-secondary">
+            <p className="mt-3 text-base leading-relaxed text-text-primary">
               {post.description}
             </p>
-          </Link>
+          </article>
         ))}
       </div>
     </section>

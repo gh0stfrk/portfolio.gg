@@ -5,7 +5,7 @@ const EAGLE_LIGHT_SRC = '/baldy-light-mode-4k.jpg';
 
 export function NeonEagle() {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-2xl">
+    <div className="relative h-full w-full overflow-hidden">
       <div className="pointer-events-none absolute inset-6 rounded-full bg-primary/10 blur-3xl dark:hidden" />
       <Image
         src={EAGLE_LIGHT_SRC}
@@ -13,7 +13,7 @@ export function NeonEagle() {
         aria-hidden="true"
         width={1254}
         height={1254}
-        className="h-full w-full scale-x-[-1] object-contain mix-blend-multiply brightness-95 contrast-125 saturate-110 dark:hidden"
+        className="h-full w-full scale-x-[-1] object-contain mix-blend-multiply brightness-90 contrast-150 saturate-125 dark:hidden"
         draggable={false}
       />
       <Image

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { ContactBusinessCard } from "@/components/contact-business-card";
 import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
@@ -10,36 +10,28 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="mx-auto flex min-h-[calc(100svh-5rem)] max-w-4xl flex-col justify-center px-6 py-10 sm:px-6 sm:py-14 md:min-h-0 lg:px-8">
-      <SectionHeading description="Email and social links." eyebrow="Contact" title="Contact" />
+    <section className="mx-auto min-h-[calc(100svh-4.5rem)] w-full max-w-[1920px] px-5 py-16 sm:px-8 sm:py-24">
+      <SectionHeading
+        description="Email and social links."
+        level={1}
+        split
+        title="Contact"
+      />
 
-      <div className="mt-8 rounded-2xl border border-subtle bg-surface p-6 sm:mt-10 sm:p-8">
-        <Link
-          className="flex items-center gap-3 text-base font-semibold text-text-primary hover:text-primary sm:text-lg"
-          href="mailto:salman@salmansyyd.com"
-        >
-          <span className="inline-flex size-11 items-center justify-center rounded-full bg-primary/15 text-primary">
-            <Mail className="size-5" />
-          </span>
-          <span className="min-w-0 break-all leading-tight">
+      <div className="mt-16 grid items-center gap-16 lg:mt-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-20">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-text-secondary">Start a conversation</p>
+          <Link
+            className="mt-5 block break-all font-display text-[clamp(1.65rem,3vw,3rem)] font-semibold leading-[0.98] tracking-[-0.06em] text-text-primary transition-colors hover:text-primary"
+            href="mailto:salman@salmansyyd.com"
+          >
             salman@salmansyyd.com
-          </span>
-        </Link>
-        <div className="mt-8 flex flex-wrap gap-3">
-          {[
-            ["GitHub", "https://github.com/gh0stfrk"],
-            ["LinkedIn", "https://www.linkedin.com/in/syydsalman"],
-            ["X", "https://x.com/gh0stfrk"]
-          ].map(([label, href]) => (
-            <Link
-              className="rounded-full border border-subtle px-4 py-2 text-sm font-semibold text-text-secondary hover:border-primary/60 hover:text-text-primary"
-              href={href}
-              key={label}
-            >
-              {label}
-            </Link>
-          ))}
+          </Link>
+          <p className="mt-6 max-w-[36ch] text-base leading-relaxed text-text-secondary">
+            Have a backend, cloud, or data systems problem to solve? Send a note and tell me what you’re building.
+          </p>
         </div>
+        <ContactBusinessCard />
       </div>
     </section>
   );

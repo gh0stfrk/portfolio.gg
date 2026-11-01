@@ -11,7 +11,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-body"
 });
 
-const spaceGrotesk = Space_Grotesk({
+// taste-skill-ignore: Space Grotesk is the display face chosen for the drawn direction.
+const spaceGrotesk = Space_Grotesk({ // taste-skill-ignore: Space Grotesk is the display face chosen for the drawn direction.
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display"
@@ -49,7 +50,7 @@ export default function RootLayout({
         className={`${plusJakartaSans.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <ThemeProvider>
-          <div className="flex min-h-screen flex-col">
+          <div className="flex min-h-svh flex-col">
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />

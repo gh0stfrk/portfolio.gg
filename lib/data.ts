@@ -1,24 +1,24 @@
 export const projects = [
   {
     title: "Bliss Modernization",
+    category: "Platform modernization",
     description:
       "Modernizing a Java monolith used for wholesale banknote trading into Node.js and TypeScript services.",
-    tech: ["Node.js", "TypeScript", "PostgreSQL", "Microservices"],
-    href: "#"
+    tech: ["Node.js", "TypeScript", "PostgreSQL", "Microservices"]
   },
   {
     title: "AWS Service Deployment",
+    category: "Cloud infrastructure",
     description:
       "Containerized services deployed on AWS with EKS, Docker images, and CircleCI pipelines.",
-    tech: ["AWS", "EKS", "Docker", "CircleCI"],
-    href: "#"
+    tech: ["AWS", "EKS", "Docker", "CircleCI"]
   },
   {
     title: "Enterprise Integration Framework",
+    category: "Data integration",
     description:
       "AWS Lambda-based data workflows for financial integrations and downstream systems.",
-    tech: ["AWS Lambda", "JavaScript", "Python", "DynamoDB"],
-    href: "#"
+    tech: ["AWS Lambda", "JavaScript", "Python", "DynamoDB"]
   }
 ];
 

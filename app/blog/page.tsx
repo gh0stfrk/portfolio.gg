@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { getAllBlogPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blogs",
+  title: "Writing",
   description: "Technical notes about web engineering, backend systems, and cloud work."
 };
 
@@ -12,20 +12,21 @@ export default async function BlogPage() {
   const posts = await getAllBlogPosts();
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16 sm:px-6 lg:px-8">
+    <section className="taste-reveal mx-auto w-full max-w-[1920px] px-5 py-16 sm:px-8 sm:py-24">
       <SectionHeading
         description="Technical notes and project writeups."
-        eyebrow="Blog"
+        level={1}
+        split
         title="Writing"
       />
-      <div className="mt-10 grid gap-4">
+
+      <div className="mt-14 sm:mt-20">
         {posts.map((post) => (
-          <Link
-            className="group rounded-2xl border border-subtle bg-surface p-6 hover:border-primary/60"
-            href={`/blog/${post.slug}`}
+          <article
+            className="grid gap-4 py-8 md:grid-cols-12 md:gap-8 md:py-10"
             key={post.slug}
           >
-            <div className="flex flex-wrap items-center gap-2 text-sm text-text-secondary">
+            <div className="text-base text-text-secondary md:col-span-3">
               <time dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString("en", {
                   month: "long",
@@ -33,26 +34,27 @@ export default async function BlogPage() {
                   year: "numeric"
                 })}
               </time>
-              <span>·</span>
-              <span>{post.readingTime}</span>
+              <p className="mt-1">{post.readingTime}</p>
             </div>
-            <h2 className="mt-3 text-2xl font-bold tracking-tight group-hover:text-primary">
-              {post.title}
-            </h2>
-            <p className="mt-3 max-w-3xl leading-relaxed text-text-secondary">
-              {post.description}
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <span
-                  className="rounded-full border border-subtle px-3 py-1 text-xs font-medium text-text-secondary"
-                  key={tag}
+            <div className="md:col-span-8 md:col-start-5">
+              <h2 className="font-display text-2xl font-semibold leading-tight tracking-tight sm:text-3xl">
+                <Link
+                  className="text-text-primary transition-colors hover:text-primary"
+                  href={`/blog/${post.slug}`}
                 >
-                  {tag}
-                </span>
-              ))}
+                  {post.title}
+                </Link>
+              </h2>
+              <p className="mt-3 max-w-[62ch] text-base leading-relaxed text-text-primary">
+                {post.description}
+              </p>
+              {post.tags.length > 0 ? (
+                <p className="mt-3 text-sm text-text-secondary">
+                  {post.tags.join(", ")}
+                </p>
+              ) : null}
             </div>
-          </Link>
+          </article>
         ))}
       </div>
     </section>

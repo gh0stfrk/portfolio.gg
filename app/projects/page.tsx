@@ -1,53 +1,41 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ExternalLink } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { projects } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Selected projects and technical areas."
+  description: "Selected backend, cloud, and data integration work."
 };
 
 export default function ProjectsPage() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 sm:px-6 lg:px-8">
+    <section className="mx-auto w-full max-w-[1920px] px-5 py-16 sm:px-8 sm:py-24">
       <SectionHeading
-        description="Current work and engineering areas."
-        eyebrow="Projects"
-        title="Projects"
+        description="Backend services and data workflows across financial platforms."
+        level={1}
+        split
+        title="Selected work"
       />
 
-      <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-14 sm:mt-20">
         {projects.map((project) => (
           <article
-            className="flex min-h-72 flex-col rounded-2xl border border-subtle bg-surface p-6"
+            className="grid gap-5 py-9 md:grid-cols-12 md:gap-8 md:py-12"
             key={project.title}
           >
-            <div className="flex items-start justify-between gap-4">
-              <h2 className="text-xl font-bold tracking-tight">
+            <div className="md:col-span-5">
+              <p className="text-base text-text-secondary">{project.category}</p>
+              <h2 className="mt-2 max-w-[18ch] font-display text-3xl font-semibold leading-tight tracking-tight text-text-primary sm:text-4xl">
                 {project.title}
               </h2>
-              <Link
-                aria-label={`Open ${project.title}`}
-                className="rounded-full border border-subtle p-2 text-text-secondary hover:border-primary/60 hover:text-primary"
-                href={project.href}
-              >
-                <ExternalLink className="size-4" />
-              </Link>
             </div>
-            <p className="mt-4 flex-1 leading-relaxed text-text-secondary">
-              {project.description}
-            </p>
-            <div className="mt-6 flex flex-wrap gap-2">
-              {project.tech.map((item) => (
-                <span
-                  className="rounded-full border border-subtle px-3 py-1 text-xs font-medium text-text-secondary"
-                  key={item}
-                >
-                  {item}
-                </span>
-              ))}
+            <div className="md:col-span-6 md:col-start-7">
+              <p className="max-w-[62ch] text-base leading-relaxed text-text-primary sm:text-lg">
+                {project.description}
+              </p>
+              <p className="mt-5 max-w-[62ch] text-base leading-relaxed text-text-secondary">
+                {project.tech.join(", ")}
+              </p>
             </div>
           </article>
         ))}

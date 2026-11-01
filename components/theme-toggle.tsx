@@ -31,7 +31,7 @@ export function ThemeToggle() {
     <button
       aria-label="Toggle theme"
       aria-pressed={!isDark}
-      className="inline-flex size-10 items-center justify-center rounded-full border border-subtle bg-surface text-text-secondary hover:border-primary/60 hover:text-text-primary"
+      className="inline-flex size-11 items-center justify-center text-text-secondary transition-colors hover:text-primary"
       onClick={() => {
         const currentTheme = document.documentElement.classList.contains("dark")
           ? "dark"
