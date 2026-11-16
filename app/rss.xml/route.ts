@@ -1,6 +1,6 @@
-import { getAllBlogPosts } from "@/lib/blog";
 
-const siteUrl = "https://salmansyyd.com";
+import { getAllBlogPosts } from "@/lib/blog";
+import { siteUrl } from "@/lib/site";
 
 export async function GET() {
   const posts = await getAllBlogPosts();

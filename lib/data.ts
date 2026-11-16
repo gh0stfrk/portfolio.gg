@@ -1,24 +1,27 @@
 export const projects = [
   {
     title: "Bliss Modernization",
+    category: "Platform modernization",
     description:
       "Modernizing a Java monolith used for wholesale banknote trading into Node.js and TypeScript services.",
     tech: ["Node.js", "TypeScript", "PostgreSQL", "Microservices"],
-    href: "#"
+    featured: true
   },
   {
     title: "AWS Service Deployment",
+    category: "Cloud infrastructure",
     description:
       "Containerized services deployed on AWS with EKS, Docker images, and CircleCI pipelines.",
     tech: ["AWS", "EKS", "Docker", "CircleCI"],
-    href: "#"
+    featured: false
   },
   {
     title: "Enterprise Integration Framework",
+    category: "Data integration",
     description:
       "AWS Lambda-based data workflows for financial integrations and downstream systems.",
     tech: ["AWS Lambda", "JavaScript", "Python", "DynamoDB"],
-    href: "#"
+    featured: true
   }
 ];
 
@@ -49,11 +52,5 @@ export const experiences = [
     role: "TRP Software Developer - Travelex",
     summary:
       "Built and maintained ETL jobs that processed transactions and financial data, including AWS Lambda-based workflows for transforming and delivering large data volumes to downstream financial systems."
-  },
-  {
-    period: "2020 - 2023",
-    role: "BSc Computer Science - University of Mumbai",
-    summary:
-      "Studied computer science with coursework and projects across web development, cloud computing, system design, and data structures."
   }
 ];
