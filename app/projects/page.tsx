@@ -4,7 +4,9 @@ import { projects } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Selected backend, cloud, and data integration work."
+  description:
+    "Selected full stack, cloud, and data integration work by Salman Sayyed.",
+  alternates: { canonical: "/projects" }
 };
 
 export default function ProjectsPage() {
@@ -17,7 +19,7 @@ export default function ProjectsPage() {
         title="Selected work"
       />
 
-      <div className="mt-14 sm:mt-20">
+      <div className="mt-10 sm:mt-20">
         {projects.map((project) => (
           <article
             className="grid gap-5 py-9 md:grid-cols-12 md:gap-8 md:py-12"

@@ -13,7 +13,7 @@ export function SectionHeading({
 
   return (
     <div className={split ? "grid w-full gap-6 md:grid-cols-12 md:items-end md:gap-8" : "max-w-[52rem]"}>
-      <div className={split ? "md:col-span-7" : undefined}>
+      <div className={split ? "md:col-span-5" : undefined}>
         <Heading
           className={
             level === 1
@@ -26,7 +26,7 @@ export function SectionHeading({
       </div>
       {description ? (
         <p className={split
-          ? "max-w-[38ch] text-lg leading-relaxed text-text-primary sm:text-xl md:col-span-4 md:col-start-9"
+          ? "max-w-[38ch] text-lg leading-relaxed text-text-primary sm:text-xl md:col-span-6 md:col-start-7"
           : "mt-5 max-w-[38ch] text-lg leading-relaxed text-text-primary sm:text-xl"
         }>
           {description}

@@ -19,7 +19,7 @@ export function Footer(): ReactElement {
               Get in touch
             </h2>
             <Link
-              className="mt-6 inline-flex min-h-11 break-all text-lg font-semibold underline decoration-[#07120B]/40 underline-offset-4 hover:decoration-[#07120B] sm:text-xl"
+              className="mt-6 block min-h-11 w-fit max-w-full break-words text-lg font-semibold underline decoration-[#07120B]/40 underline-offset-4 hover:decoration-[#07120B] sm:text-xl"
               href="mailto:salman@salmansyyd.com"
             >
               salman@salmansyyd.com

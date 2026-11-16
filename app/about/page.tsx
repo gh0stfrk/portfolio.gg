@@ -4,7 +4,9 @@ import { experiences, skillGroups } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Salman Sayyed, his engineering experience, and skills."
+  description:
+    "About Salman Sayyed, a full stack engineer in Mumbai: experience at Travelex, skills, and how he builds with AI.",
+  alternates: { canonical: "/about" }
 };
 
 export default function AboutPage() {

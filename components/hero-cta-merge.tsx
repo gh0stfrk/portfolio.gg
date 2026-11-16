@@ -23,13 +23,13 @@ export function HeroCtaMerge({
           className="relative inline-flex items-center justify-center rounded-2xl rounded-r-lg bg-primary px-5 py-3.5 text-sm font-semibold text-[#0B0F14] hover:bg-primary/90"
           href={blogHref}
         >
-          View Blogs
+          Blogs
         </Link>
         <Link
           className="relative inline-flex items-center justify-center rounded-2xl rounded-l-lg border border-subtle bg-surface px-5 py-3.5 text-sm font-semibold text-text-primary hover:border-primary/60"
           href={projectsHref}
         >
-          View Projects
+          Projects
         </Link>
       </div>
     </div>

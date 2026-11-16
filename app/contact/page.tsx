@@ -5,7 +5,8 @@ import { SectionHeading } from "@/components/section-heading";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact Salman Sayyed."
+  description: "Get in touch with Salman Sayyed, full stack engineer in Mumbai.",
+  alternates: { canonical: "/contact" }
 };
 
 export default function ContactPage() {
@@ -18,11 +19,11 @@ export default function ContactPage() {
         title="Contact"
       />
 
-      <div className="mt-16 grid items-center gap-16 lg:mt-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-20">
+      <div className="mt-16 grid items-center gap-10 lg:mt-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-20">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-text-secondary">Start a conversation</p>
           <Link
-            className="mt-5 block break-all font-display text-[clamp(1.65rem,3vw,3rem)] font-semibold leading-[0.98] tracking-[-0.06em] text-text-primary transition-colors hover:text-primary"
+            className="mt-5 block break-words font-display text-[clamp(1.35rem,6.2vw,3rem)] font-semibold leading-[0.98] tracking-[-0.06em] text-text-primary transition-colors hover:text-primary"
             href="mailto:salman@salmansyyd.com"
           >
             salman@salmansyyd.com

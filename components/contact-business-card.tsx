@@ -76,7 +76,7 @@ export function ContactBusinessCard() {
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-primary">
                   Independent engineer
                 </p>
-                <h2 className="mt-8 font-display text-3xl font-semibold tracking-[-0.055em] text-white sm:text-5xl">
+                <h2 className="mt-4 whitespace-nowrap font-display text-[clamp(1.35rem,7vw,3rem)] font-semibold tracking-[-0.055em] text-white sm:mt-8 sm:text-5xl">
                   Salman Sayyed
                 </h2>
                 <p className="mt-2 text-sm text-white/65">Backend systems · Mumbai, India</p>
@@ -101,7 +101,7 @@ export function ContactBusinessCard() {
               Let’s connect
             </p>
             <Link
-              className="mt-7 block break-all font-display text-[clamp(1.25rem,4vw,2rem)] font-semibold leading-tight tracking-[-0.04em] text-[#0b0f14] underline decoration-[#0b0f14]/30 underline-offset-4 transition-colors hover:decoration-[#0b0f14]"
+              className="mt-7 block break-words font-display text-[clamp(1.25rem,4vw,2rem)] font-semibold leading-tight tracking-[-0.04em] text-[#0b0f14] underline decoration-[#0b0f14]/30 underline-offset-4 transition-colors hover:decoration-[#0b0f14]"
               href="mailto:salman@salmansyyd.com"
               tabIndex={flipped ? 0 : -1}
             >
@@ -126,7 +126,7 @@ export function ContactBusinessCard() {
         </div>
       </div>
 
-      <div className="mt-5 flex items-center justify-between gap-4">
+      <div className="mt-5 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         <p aria-live="polite" className="text-sm text-text-secondary">
           {flipped ? "The reverse · contact details" : "The front · swipe to turn it over"}
         </p>

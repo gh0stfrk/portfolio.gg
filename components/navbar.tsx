@@ -38,7 +38,10 @@ export function Navbar() {
           href="/"
           onClick={() => setOpen(false)}
         >
-          <LogoMark />
+          <span className="font-display text-xl font-bold tracking-[-0.06em] dark:hidden">
+            SS
+          </span>
+          <LogoMark className="hidden dark:block" />
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">
